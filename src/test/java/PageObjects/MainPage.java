@@ -58,6 +58,9 @@ public class MainPage {
     @FindBy(xpath = "/html/body/section[4]/div/div/div[2]/h2")
     private WebElement learnTheFundamentalsHeader;
 
+    @FindBy(xpath = "/html/body/section[7]/div/h2")
+    private WebElement instructorsHeader;
+
     public MainPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -71,6 +74,9 @@ public class MainPage {
         this.emailField.sendKeys(email);
     }
 
+    public String getInstructorsHeader() {
+        return instructorsHeader.getText();
+    }
 
     public void clickOnReadMoreButtonVirtual() {
         this.readMoreVirtual.click();

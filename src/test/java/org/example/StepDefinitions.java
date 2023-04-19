@@ -87,8 +87,8 @@ public class StepDefinitions {
     public void i_click_the_Instructors_button() {mainPage.clickOnInstructorsbutton();}
     @Then("the page goes down to the Our Instructors")
     public void the_page_goes_down_to_the_Our_Instructors(){
-        scrollToElement(driver, mainPage.getEmailField());
-        mainPage.clickOnReadMoreOurInstructors();
+        //scrollToElement(driver, mainPage.getEmailField());
+        Assert.assertEquals(mainPage.getInstructorsHeader(), "Our Instructors");
     }
     @Then("the Learn Selenium loads return")
     public void the_Learn_Selenium_loads_return(){
